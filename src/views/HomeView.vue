@@ -101,15 +101,8 @@ export default {
     search (val) {
       val && val !== this.select && this.querySelections(val)
     },
-    filterCity(newVal, oldVal) {
-      console.log(oldVal, newVal);
-      this.filterCities(newVal);
-    }
   },
   methods: {
-    filterCities(val) {
-      this.displayed = this.items.filter((item) => item.title.includes(val));
-    },
     querySelections (v) {
       this.loading = true
       // Simulated ajax query
